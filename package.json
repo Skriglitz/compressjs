@@ -1,6 +1,6 @@
 {
   "name": "compressjs",
-  "version": "1.0.3-git",
+  "version": "1.0.3-noamd",
   "author": "C. Scott Ananian",
   "description": "pure JavaScript de/compression (bzip2, etc) for node.js, volo, and the browser.",
   "keywords": [
@@ -11,7 +11,7 @@
   "main": "main",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cscott/compressjs.git"
+    "url": "https://github.com/skriglitz/compressjs.git"
   },
   "license": "GPL",
   "bin": {
@@ -21,15 +21,12 @@
     "test": "test"
   },
   "dependencies": {
-    "amdefine": "~1.0.0",
-    "commander": "~2.8.1"
+    "commander": "^2.12.2"
   },
   "devDependencies": {
     "mocha": "~2.2.5"
   },
   "scripts": {
     "test": "mocha"
-  },
-  "amd": {},
-  "volo": {}
+  }
 }

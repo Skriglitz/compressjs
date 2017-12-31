@@ -1,29 +1,31 @@
-if (typeof define !== 'function') { var define = require('amdefine')(module); }
-define(['./lib/freeze','./lib/BitStream','./lib/Stream','./lib/BWT','./lib/Context1Model','./lib/DefSumModel','./lib/FenwickModel','./lib/MTFModel','./lib/NoModel','./lib/Huffman','./lib/RangeCoder','./lib/BWTC','./lib/Bzip2','./lib/Dmc','./lib/Lzjb','./lib/LzjbR','./lib/Lzp3','./lib/PPM','./lib/Simple'], function(freeze,BitStream,Stream,BWT,Context1Model,DefSumModel,FenwickModel,MTFModel,NoModel,Huffman,RangeCoder,BWTC,Bzip2,Dmc,Lzjb,LzjbR,Lzp3,PPM,Simple) {
-    'use strict';
-    return freeze({
-        version: "0.0.1",
-        // APIs
-        BitStream: BitStream,
-        Stream: Stream,
-        // transforms
-        BWT: BWT,
-        // models and coder
-        Context1Model: Context1Model,
-        DefSumModel: DefSumModel,
-        FenwickModel: FenwickModel,
-        MTFModel: MTFModel,
-        NoModel: NoModel,
-        Huffman: Huffman,
-        RangeCoder: RangeCoder,
-        // compression methods
-        BWTC: BWTC,
-        Bzip2: Bzip2,
-        Dmc: Dmc,
-        Lzjb: Lzjb,
-        LzjbR: LzjbR,
-        Lzp3: Lzp3,
-        PPM: PPM,
-        Simple: Simple
-    });
-});
+'use strict';
+
+if (typeof console.asert !== "function") {
+    console.assert = function() {};
+}
+
+exports.BWT = require('./lib/BWT');
+exports.BWTC = require('./lib/BWTC');
+exports.BitStream = require('./lib/BitStream');
+exports.Bzip2 = require('./lib/Bzip2');
+exports.CRC32 = require('./lib/CRC32');
+exports.Context1Model = require('./lib/Context1Model');
+exports.DefSumModel = require('./lib/DefSumModel');
+exports.DeflateDistanceModel = require('./lib/DeflateDistanceModel');
+exports.Dmc = require('./lib/Dmc');
+exports.DummyRangeCoder = require('./lib/DummyRangeCoder');
+exports.FenwickModel = require('./lib/FenwickModel');
+exports.Huffman = require('./lib/Huffman');
+exports.HuffmanAllocator = require('./lib/HuffmanAllocator');
+exports.LogDistanceModel = require('./lib/LogDistanceModel');
+exports.Lzjb = require('./lib/Lzjb');
+exports.LzjbR = require('./lib/LzjbR');
+exports.Lzp3 = require('./lib/Lzp3');
+exports.MTFModel = require('./lib/MTFModel');
+exports.NoModel = require('./lib/NoModel');
+exports.PPM = require('./lib/PPM');
+exports.RangeCoder = require('./lib/RangeCoder');
+exports.Simple = require('./lib/Simple');
+exports.Stream = require('./lib/Stream');
+exports.Util = require('./lib/Util');
+exports.freeze = require('./lib/freeze');
