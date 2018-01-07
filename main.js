@@ -58,6 +58,7 @@ exports.selectAlgorithm = new function(algorithm) {
         case 'stream': return Stream;
         case 'util': return Util;
         case 'freeze': return freeze;
+        default: return null;
     }
 }
 
