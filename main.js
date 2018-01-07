@@ -31,7 +31,7 @@ const Stream = require('./lib/Stream');
 const Util = require('./lib/Util');
 const freeze = require('./lib/freeze');
 
-exports.selectAlgorithm = new function(algorithm) {
+exports.selectAlgorithm = function(algorithm) {
     switch (algorithm.toLowerCase()) {
         case 'bwtc': return BWTC;
         case 'bzip2': return Bzip2;
