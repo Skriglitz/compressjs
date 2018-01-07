@@ -33,31 +33,13 @@ const freeze = require('./lib/freeze');
 
 exports.selectAlgorithm = new function(algorithm) {
     switch (algorithm.toLowerCase()) {
-        case 'bwt': return BWT;
         case 'bwtc': return BWTC;
-        case 'bitstream': return BitStream;
         case 'bzip2': return Bzip2;
-        case 'crc32': return CRC32;
-        case 'context1model': return Context1Model;
-        case 'defsummodel': return DefSumModel;
-        case 'deflatedistancemodel': return DeflateDistanceModel;
         case 'dmc': return Dmc;
-        case 'dummyrangecoder': return DummyRangeCoder;
-        case 'fenwickmodel': return FenwickModel;
-        case 'huffman': return Huffman;
-        case 'huffmanallocator': return HuffmanAllocator;
-        case 'logdistancemodel': return LogDistanceModel;
         case 'lzjb': return Lzjb;
-        case 'lzjbR': return LzjbR;
+        case 'lzjbr': return LzjbR;
         case 'lzp3': return Lzp3;
-        case 'mtfmodel': return MTFModel;
-        case 'nomodel': return NoModel;
         case 'ppm': return PPM;
-        case 'rangecoder': return RangeCoder;
-        case 'simple': return Simple;
-        case 'stream': return Stream;
-        case 'util': return Util;
-        case 'freeze': return freeze;
         default: return null;
     }
 }
